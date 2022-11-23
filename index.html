@@ -70,7 +70,7 @@
 
 	  <img id="my-pic" src="http://dummyimage.com/300x400" alt="Time of Day Image" class="flexible" />
      <footer>
-      <p><small>&copy; 2022 by 
+      <p><small>&copy; <span id="current-year"></span> by 
           Feysal Omar, All Rights Reserved ~ 
           <a id="html-checker" href="#">Check HTML</a> ~ 
           <a id="css-checker" href="#">Check CSS</a></small>
@@ -105,6 +105,7 @@
 	let myGreeting = "";
 	let myColor = "";
 	let myPic = "";
+	let myYear = myDate.getFullYear();
 
 	if(myHour >= 5 && myHour < 12){
 		//alert("Good Afternoon!");
@@ -141,10 +142,13 @@
 	document.getElementById("my-greeting").innerHTML= myGreeting;
 
 	//Here we are changing the backround color in the HTML tag
-	document.querySelector("html").style.backgroundColor = myColor
+	document.querySelector("html").style.backgroundColor = myColor;
  
  //here we changed the pic
  document.getElementById("my-pic").src = myPic;
+
+ // here we are making the year change for current year
+ document.getElementById("current-year").innerHTML = myYear;
  
  
  </script>
